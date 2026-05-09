@@ -4,13 +4,14 @@ class Config:
 
     SECRET_KEY = os.environ.get('SECRET_KEY', 'mysecretkey')
 
-    MYSQL_HOST = 'sql312.infinityfree.com'
+    MYSQL_HOST = 'mysql-2cda301d-uafstudentsperformance.k.aivencloud.com'
 
-    MYSQL_USER = 'if0_41847455'
+    MYSQL_USER = 'avnadmin'
 
-    MYSQL_PASSWORD = 'I9BB771jqjT'
+    MYSQL_PASSWORD = 'avnadmin'
 
-    MYSQL_DB = 'if0_41847455_studentperformance'
+    MYSQL_DB = 'defaultdb'
+    MYSQL_PORT = 12138
     # SECRET_KEY = os.environ.get('SECRET_KEY', 'mysecretkey')
 
     # MYSQL_HOST = 'localhost'
