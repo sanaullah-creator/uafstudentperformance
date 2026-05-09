@@ -1,23 +1,15 @@
 import os
+from urllib.parse import quote_plus
 
 class Config:
-
     SECRET_KEY = os.environ.get('SECRET_KEY', 'mysecretkey')
-
-    MYSQL_HOST = 'mysql-2cda301d-uafstudentsperformance.k.aivencloud.com'
-
-    MYSQL_USER = 'avnadmin'
-
-    MYSQL_PASSWORD = 'avnadmin'
-
-    MYSQL_DB = 'defaultdb'
-    MYSQL_PORT = 12138
-    # SECRET_KEY = os.environ.get('SECRET_KEY', 'mysecretkey')
-
-    # MYSQL_HOST = 'localhost'
-
-    # MYSQL_USER = 'root'
-
-    # MYSQL_PASSWORD = ''
-
-    # MYSQL_DB = 'student_performance_db'
+    
+    # ==================== MongoDB Atlas Configuration ====================
+    MONGO_USER = "uafstudent"
+    MONGO_PASSWORD = "Sa805124@"
+    
+    MONGO_URI = (
+        f"mongodb+srv://{quote_plus(MONGO_USER)}:{quote_plus(MONGO_PASSWORD)}"
+        f"@uafstudentperformance.hegsh6s.mongodb.net/"
+        f"student_performance_db?retryWrites=true&w=majority&appName=uafstudentperformance"
+    )
